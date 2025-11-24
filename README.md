@@ -1,6 +1,6 @@
 # Second-Order Private Optimization (NeurIPS 2023)
 
-This repo contains the code for the numerical results presented in the following papers. 
+This repo contains the code for the numerical results presented in the following paper. 
 
 **"Faster Differentially Private Convex Optimization via Second-Order Methods"** <br>
 **Published at NeurIPS'23**<br>
