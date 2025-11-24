@@ -1,36 +1,56 @@
-Faster Differentially Private Convex Optimization via Second-Order Methods
+# Second-Order Private Optimization (NeurIPS 2023)
 
-This repository contains the official implementation of the algorithms and experiments presented in the NeurIPS 2023 paper "Faster Differentially Private Convex Optimization via Second-Order Methods".
+Fast, practical differentially private (DP) training for convex models using **second-order information**.  
+This repo accompanies the NeurIPS 2023 paper **“Faster Differentially Private Convex Optimization via Second-Order Methods.”**
 
+If you’ve ever tried DP-SGD / DP-GD on convex problems and watched it crawl because of privacy noise… this is the fix: **use curvature to get to the same (or better) accuracy in far fewer iterations.**
 
+---
 
-🚀 Key Algorithms
+## Why this matters (industry TL;DR)
 
-Practical DP Newton with Double Noise (Algorithm 3)
+For convex ERM (e.g., logistic regression / linear classifiers), standard DP first-order methods are slow because:
+- privacy noise accumulates across many gradient steps,  
+- so you need tiny steps + lots of iterations to stabilize training.
 
-A practical algorithm designed for logistic regression and Generalized Linear Models (GLMs). It privatizes the update by injecting noise at two stages:
+This code implements **Double-Noise DP Newton-style methods** that:
+- leverage curvature to take larger, better-scaled steps,
+- **reduce iteration count dramatically**, and
+- match strong privacy guarantees.
 
-Gradient Privatization: Adding noise to the gradient.
+Think: **faster DP baselines for privacy-sensitive analytics and model training.**
 
-Direction Privatization: Adding noise to the Newton direction after scaling by the Hessian.
+---
 
-To ensure stability and privacy, the algorithm modifies the Hessian eigenvalues using two strategies:
+## What’s inside
 
-Hessian Clipping (clip): Replaces small eigenvalues $\lambda_i$ with $\max\{\lambda_i, \lambda_0\}$.
+### Algorithms
+- **Double-Noise Mechanism (our method)** — 4 variants:
+  - `DN-Hess-add`  : Hessian SOI + eigenvalue **add** regularization  
+  - `DN-Hess-clip` : Hessian SOI + eigenvalue **clip** regularization  
+  - `DN-UB-add`    : Quadratic upper-bound SOI + **add** regularization  
+  - `DN-UB-clip`   : Quadratic upper-bound SOI + **clip** regularization  
 
-Hessian Adding (add): Adds a constant shift $\lambda_i + \lambda_0$ (Regularization).
+- **Baselines**
+  - `DPGD` : DP Gradient Descent  
+  - `private-newton` : DP Damped Newton baseline  
 
+### Datasets
+Supported via `dataset_loader.py`:
+- `a1a_dataset`
+- `protein_dataset`
+- `fmnist_dataset`
+- `synthetic_dataset`
 
+---
 
-@inproceedings{ganesh2023faster,
-  title={Faster Differentially Private Convex Optimization via Second-Order Methods},
-  author={Ganesh, Arun and Haghifam, Mahdi and Steinke, Thomas and Thakurta, Abhradeep},
-  booktitle={Advances in Neural Information Processing Systems},
-  volume={36},
-  year={2023}
-}
+## Setup
 
+### Requirements
+- Python 3.8+
+- NumPy
+- SciPy
 
-📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
+Install deps:
+```bash
+pip install numpy scipy
