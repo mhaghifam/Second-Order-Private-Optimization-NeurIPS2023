@@ -1,11 +1,12 @@
 # Second-Order Private Optimization (NeurIPS 2023)
 
+This repo contains the code for the numerical results presented in the following papers. 
 
-[![NeurIPS 2023](https://img.shields.io/badge/NeurIPS-2023-blue.svg)]([https://neurips.cc/virtual/2024/poster/94421](https://proceedings.neurips.cc/paper_files/paper/2023/file/fb1d9c3fc2161e12aa71cdcab74b9d2c-Paper-Conference.pdf))
-[![arXiv](https://img.shields.io/badge/arXiv-2305.13209-b31b1b.svg)]([https://arxiv.org/abs/2406.07407](https://arxiv.org/abs/2305.13209))
+1- **"Faster Differentially Private Convex Optimization via Second-Order Methods"** <br>
+**Published at NeurIPS'23**<br>
+[[https://arxiv.org/abs/1911.02151](https://arxiv.org/abs/2305.13209)] <br>
+by Arun Ganesh, Mahdi Haghifam, Thomas Steinke, Abhradeep Thakurta
 
-
-Official implementation of **"Private Geometric Median"** presented at NeurIPS 2024.
 
 ---
 
