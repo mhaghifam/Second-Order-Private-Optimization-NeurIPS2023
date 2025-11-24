@@ -209,7 +209,7 @@ class AlgorithmComparison:
         
         return gradient_norms
     
-    # Maintain backward compatibility with original names
+ 
     wall_clock_alg = get_wall_clock_times
     loss_vals = get_loss_values
     accuracy_vals = get_accuracy_values
@@ -876,7 +876,7 @@ class DoubleNoiseMechanism:
             newton_direction = hessian_inverse @ noisy_gradient
             return current_weights - newton_direction + direction_noise
     
-    # Maintain backward compatibility with original method names
+
     update_rule = update_full_batch
     update_rule_stochastic = update_stochastic
     noisy_grad = _compute_noisy_gradient
@@ -884,7 +884,7 @@ class DoubleNoiseMechanism:
     noisy_direction_stochastic = _compute_noisy_direction_stochastic
 
 
-# Maintain backward compatibility with original function names
+
 CompareAlgs = AlgorithmComparison
 private_newton = differentially_private_newton
 eigenclip = eigenvalue_clipping
