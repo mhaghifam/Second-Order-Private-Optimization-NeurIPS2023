@@ -385,7 +385,7 @@ class MyLogisticRegression:
         
         return quadratic_matrix / batch_size
     
-    # Alias methods for backward compatibility
+
     loss_wor = loss_without_regularization
     grad = gradient
     grad_wor = gradient_without_regularization
