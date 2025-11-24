@@ -42,6 +42,13 @@ Supported via `dataset_loader.py`:
 
 ---
 
+
+## Contact
+
+For questions and feedback:
+- **Mahdi Haghifam** - [haghifam.mahdi@gmail.com](mailto:haghifam.mahdi@gmail.com)
+
+
 ## Setup
 
 ### Requirements
@@ -52,3 +59,6 @@ Supported via `dataset_loader.py`:
 Install deps:
 ```bash
 pip install numpy scipy
+
+
+
