@@ -1,13 +1,11 @@
 # Second-Order Private Optimization (NeurIPS 2023)
 
-Fast, practical differentially private (DP) training for convex models using **second-order information**.  
+
 This repo accompanies the NeurIPS 2023 paper **“Faster Differentially Private Convex Optimization via Second-Order Methods.”**
 
-If you’ve ever tried DP-SGD / DP-GD on convex problems and watched it crawl because of privacy noise… this is the fix: **use curvature to get to the same (or better) accuracy in far fewer iterations.**
 
 ---
 
-## Why this matters (industry TL;DR)
 
 For convex ERM (e.g., logistic regression / linear classifiers), standard DP first-order methods are slow because:
 - privacy noise accumulates across many gradient steps,  
