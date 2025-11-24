@@ -2,7 +2,7 @@
 
 This repo contains the code for the numerical results presented in the following papers. 
 
-1- **"Faster Differentially Private Convex Optimization via Second-Order Methods"** <br>
+**"Faster Differentially Private Convex Optimization via Second-Order Methods"** <br>
 **Published at NeurIPS'23**<br>
 [[https://arxiv.org/abs/1911.02151](https://arxiv.org/abs/2305.13209)] <br>
 by Arun Ganesh, Mahdi Haghifam, Thomas Steinke, Abhradeep Thakurta
