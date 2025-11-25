@@ -17,10 +17,8 @@ For convex ERM (e.g., logistic regression / linear classifiers), standard DP fir
 
 This code implements **Double-Noise DP Newton-style methods** that:
 - leverage curvature to take larger, better-scaled steps,
-- **reduce iteration count dramatically**, and
-- match strong privacy guarantees.
+- **reduce iteration count dramatically**,
 
-Think: **faster DP baselines for privacy-sensitive analytics and model training.**
 
 ---
 
