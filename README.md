@@ -27,8 +27,8 @@ This code implements **Double-Noise DP Newton-style methods** that:
   - `DN-UB-clip`   : Quadratic upper-bound SOI + **clip** regularization  
 
 - **Baselines**
-  - `DPGD` : DP Gradient Descent  
-  - `private-newton` : DP Damped Newton baseline  
+  - `DPGD` : DP Gradient Descent  from [https://arxiv.org/abs/1405.7085](https://arxiv.org/abs/1405.7085)
+  - `private-newton` : DP Damped Newton baseline  from [https://arxiv.org/abs/2103.11003](https://arxiv.org/abs/2103.11003) 
 
 ### Datasets
 Supported via `dataset_loader.py`:
