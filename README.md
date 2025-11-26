@@ -14,7 +14,7 @@ This code implements **Double-Noise DP Newton-style methods** that:
 - leverage curvature to take larger, better-scaled steps,
 - **reduce iteration count dramatically**,
 
-<img src="intro-plot.jpg" width="300">
+<img src="intro-plot.jpg" width="500">
 
 
 ---
