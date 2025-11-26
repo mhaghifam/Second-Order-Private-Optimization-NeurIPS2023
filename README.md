@@ -10,11 +10,6 @@ by Arun Ganesh, Mahdi Haghifam, Thomas Steinke, Abhradeep Thakurta
 
 ---
 
-
-For convex ERM (e.g., logistic regression / linear classifiers), standard DP first-order methods are slow because:
-- privacy noise accumulates across many gradient steps,  
-- so you need tiny steps + lots of iterations to stabilize training.
-
 This code implements **Double-Noise DP Newton-style methods** that:
 - leverage curvature to take larger, better-scaled steps,
 - **reduce iteration count dramatically**,
