@@ -25,8 +25,8 @@ This code implements **Double-Noise DP Newton-style methods** that:
 - **Double-Noise Mechanism (our method)** — 4 variants:
   - `DN-Hess-add`  : Hessian SOI + eigenvalue **add** regularization  
   - `DN-Hess-clip` : Hessian SOI + eigenvalue **clip** regularization  
-  - `DN-UB-add`    : Quadratic upper-bound SOI + **add** regularization  
-  - `DN-UB-clip`   : Quadratic upper-bound SOI + **clip** regularization  
+  - `DN-QB-add`    : Quadratic upper-bound SOI + **add** regularization  
+  - `DN-QB-clip`   : Quadratic upper-bound SOI + **clip** regularization  
 
 - **Baselines**
   - `DPGD` : DP Gradient Descent  from [https://arxiv.org/abs/1405.7085](https://arxiv.org/abs/1405.7085)
