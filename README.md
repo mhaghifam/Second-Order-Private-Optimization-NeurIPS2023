@@ -90,7 +90,6 @@ python run.py \
 python print_results.py
 ```
 Results are saved in `src/results/` as JSON files.
-````
 
 
 ## Contact
